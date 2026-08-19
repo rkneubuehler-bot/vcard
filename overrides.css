@@ -107,6 +107,19 @@ blockquote,
 }
 
 @media (max-width: 620px) {
+  /* Balance the hero heading stack: name sits evenly between eyebrow and role. */
+  .hero .eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    margin: 0;
+  }
+
+  .hero .role-block {
+    margin-top: 16px;
+  }
+
   .development-note {
     padding: 16px 17px;
     border-left-width: 4px;
@@ -133,8 +146,8 @@ blockquote,
   }
 
   .timeline li::before {
-    top: 22px;
-    left: 0;
+    top: 19px;
+    left: -4px;
   }
 
   .timeline li.current {
