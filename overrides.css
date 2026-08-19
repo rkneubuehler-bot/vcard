@@ -6,12 +6,31 @@
   width: min(1180px, calc(100% - 32px));
 }
 
-/* Hero actions: balanced grid instead of an orphaned fourth button. */
+/* Use the native system font stack for a leaner, more private setup. */
+body,
+h1,
+h2,
+blockquote,
+.quote-mark {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Hero actions: clear hierarchy without hiding useful options. */
 .hero .actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, max-content));
   justify-content: start;
   gap: 10px;
+}
+
+.button.secondary {
+  border-color: rgba(31,37,34,.24);
+  background: rgba(255,255,255,.9);
+}
+
+.button.tertiary {
+  color: var(--muted);
+  background: rgba(255,255,255,.42);
 }
 
 /* Make the upcoming HF clearly visible without making it look like a current role. */
@@ -30,6 +49,43 @@
 .development-note strong {
   color: var(--ink);
   font-size: 1.14rem;
+}
+
+/* Give the current role a subtle but unmistakable visual priority. */
+.timeline li.current {
+  border: 1px solid rgba(184,136,50,.25);
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(90deg, rgba(184,136,50,.105), rgba(255,255,255,.42));
+  box-shadow: 0 10px 28px rgba(31,37,34,.04);
+}
+
+.current-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-heading h3 {
+  margin-bottom: 0;
+}
+
+.current-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: var(--accent-dark);
+  background: rgba(184,136,50,.14);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.timeline li.current p {
+  margin-top: 6px;
 }
 
 @media (max-width: 900px) {
@@ -71,6 +127,11 @@
     font-size: 1.05rem;
   }
 
+  .timeline li.current {
+    border-left-width: 4px;
+    padding-left: 24px;
+  }
+
   /* All four contact actions remain available on mobile. */
   .hero .actions {
     position: static;
@@ -86,6 +147,15 @@
   .hero .actions .button:nth-child(n+3) {
     display: inline-flex !important;
   }
+
+  /* Contact options already exist above; keep the mobile footer quiet. */
+  .footer-contact {
+    display: none;
+  }
+
+  footer {
+    padding-top: 18px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -96,5 +166,11 @@
   .hero .actions .button {
     padding-inline: 8px;
     font-size: .82rem;
+  }
+
+  .current-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
   }
 }
