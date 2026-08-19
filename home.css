@@ -267,6 +267,9 @@ img { max-width: 100%; }
 .content-grid article:nth-child(even) {
   padding-left: 38px;
 }
+.content-grid article:nth-last-child(-n+2) {
+  border-bottom: 0;
+}
 .content-grid h3 {
   margin: 12px 0 8px;
   font-size: 1.08rem;
@@ -293,6 +296,10 @@ img { max-width: 100%; }
   gap: 28px;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
+}
+.practice-list article:last-child,
+.journey-list article:last-child {
+  border-bottom: 0;
 }
 .practice-list h3,
 .journey-list h3 {
@@ -406,7 +413,9 @@ footer {
     min-height: 0;
     padding: 24px 0;
     border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
+  .content-grid article:last-child { border-bottom: 0; }
   .practice-list article,
   .journey-list article { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
   .perspective {
