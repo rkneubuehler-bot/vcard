@@ -219,7 +219,6 @@ img { max-width: 100%; }
 
 .section {
   padding: 78px 0;
-  border-bottom: 1px solid var(--line);
 }
 .split-section {
   display: grid;
@@ -303,7 +302,6 @@ img { max-width: 100%; }
 .practice-list p,
 .journey-list p { max-width: 850px; margin: 0; }
 
-.leadership-section { border-bottom: 0; }
 .principles-grid article { min-height: 178px; }
 .principles-grid article.wide-item {
   grid-column: 1 / -1;
