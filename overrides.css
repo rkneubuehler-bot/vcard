@@ -1,0 +1,84 @@
+/* Final responsive and hierarchy refinements */
+
+/* Hero actions: balanced grid instead of an orphaned fourth button */
+.hero .actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  justify-content: start;
+  gap: 10px;
+}
+
+/* Make the upcoming HF clearly visible without making it look like a current role */
+.development-note {
+  position: relative;
+  border: 1px solid rgba(184,136,50,.34);
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(90deg, rgba(184,136,50,.12), rgba(255,255,255,.48));
+  box-shadow: 0 10px 28px rgba(31,37,34,.05);
+}
+
+.development-label {
+  color: var(--accent-dark);
+}
+
+.development-note strong {
+  color: var(--ink);
+  font-size: 1.14rem;
+}
+
+@media (max-width: 900px) {
+  /* Mobile/tablet has no useful site navigation; remove the bar completely. */
+  .topbar {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page-shell {
+    padding-top: 8px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .development-note {
+    padding: 16px 17px;
+    border-left-width: 4px;
+    background: linear-gradient(135deg, rgba(184,136,50,.14), rgba(255,255,255,.72));
+  }
+
+  .development-label {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(184,136,50,.13);
+    font-size: .76rem;
+  }
+
+  .development-note strong {
+    margin-top: 2px;
+    font-size: 1.05rem;
+  }
+
+  /* Only the two most useful quick actions remain sticky on mobile. */
+  .hero .actions {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero .actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero .actions .button {
+    padding-inline: 10px;
+    font-size: .86rem;
+  }
+}
