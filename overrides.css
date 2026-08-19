@@ -1,6 +1,12 @@
 /* Final responsive and hierarchy refinements */
 
-/* Hero actions: balanced grid instead of an orphaned fourth button */
+/* Keep the desktop composition focused instead of stretching edge-to-edge. */
+.topbar,
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+}
+
+/* Hero actions: balanced grid instead of an orphaned fourth button. */
 .hero .actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, max-content));
@@ -8,7 +14,7 @@
   gap: 10px;
 }
 
-/* Make the upcoming HF clearly visible without making it look like a current role */
+/* Make the upcoming HF clearly visible without making it look like a current role. */
 .development-note {
   position: relative;
   border: 1px solid rgba(184,136,50,.34);
@@ -27,7 +33,6 @@
 }
 
 @media (max-width: 900px) {
-  /* Mobile/tablet has no useful site navigation; remove the bar completely. */
   .topbar {
     display: none !important;
     visibility: hidden !important;
@@ -40,6 +45,7 @@
   }
 
   .page-shell {
+    width: calc(100% - 20px);
     padding-top: 8px !important;
   }
 }
@@ -65,10 +71,20 @@
     font-size: 1.05rem;
   }
 
-  /* Only the two most useful quick actions remain sticky on mobile. */
+  /* All four contact actions remain available on mobile. */
   .hero .actions {
+    position: static;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .hero .actions .button:nth-child(n+3) {
+    display: inline-flex !important;
   }
 }
 
@@ -78,7 +94,7 @@
   }
 
   .hero .actions .button {
-    padding-inline: 10px;
-    font-size: .86rem;
+    padding-inline: 8px;
+    font-size: .82rem;
   }
 }
