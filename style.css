@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
-
 :root {
   --bg: #f2eee6;
   --surface: rgba(255,255,255,.83);
@@ -34,7 +32,7 @@ body {
     radial-gradient(circle at 6% 4%, rgba(184,136,50,.12), transparent 30rem),
     radial-gradient(circle at 95% 20%, rgba(65,88,76,.08), transparent 32rem),
     var(--bg);
-  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
 }
@@ -182,7 +180,7 @@ p {
 
 h1 {
   margin: 0;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(3rem, 5vw, 5.8rem);
   line-height: .94;
   letter-spacing: -.045em;
@@ -299,7 +297,7 @@ h1 {
 
 h2 {
   margin: 0 0 18px;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(1.8rem, 2.8vw, 2.9rem);
   line-height: 1.12;
   letter-spacing: -.025em;
@@ -332,7 +330,7 @@ h2 {
 .quote-mark {
   margin: 0;
   color: var(--accent);
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 5rem;
   line-height: .7;
 }
@@ -340,7 +338,7 @@ h2 {
 blockquote {
   max-width: 28ch;
   margin: 18px 0 24px;
-  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(1.25rem, 2vw, 1.8rem);
   line-height: 1.45;
 }
