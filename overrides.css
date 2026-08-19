@@ -99,8 +99,9 @@ blockquote,
     gap: 48px;
   }
 
+  /* Marker outer diameter is 19px (13px + 2 x 3px border), so 148.5px centers it on the 158px line. */
   .timeline li::before {
-    left: 152px;
+    left: 148.5px;
   }
 
   .timeline li.current {
