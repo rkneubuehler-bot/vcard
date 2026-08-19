@@ -58,3 +58,6 @@ DOMAIN-AUFSCHALTUNG
 3. Im Pages-Projekt unter Custom domains roland-kneubuehler.ch hinzufügen
 4. Optional www.roland-kneubuehler.ch auf die Hauptdomain umleiten
 5. Erst danach finalen QR-Code und NFC-Karte auf https://roland-kneubuehler.ch programmieren
+
+DEPLOYMENT-TRIGGER
+- 19.08.2026: Manueller Trigger-Commit zur Prüfung der automatischen Cloudflare-Pages-Bereitstellung.
