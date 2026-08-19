@@ -127,13 +127,14 @@ blockquote,
     font-size: 1.05rem;
   }
 
-  /* Center each marker precisely on the vertical timeline. */
+  /* The timeline marker belongs to the date label on mobile. */
   .timeline::before {
     left: 6px;
   }
 
   .timeline li::before {
-    left: -4px;
+    top: 22px;
+    left: 0;
   }
 
   .timeline li.current {
