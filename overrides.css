@@ -6,13 +6,13 @@
   width: min(1180px, calc(100% - 32px));
 }
 
-/* Use the native system font stack for a leaner, more private setup. */
+/* Preserve the original Manrope typography for the visual identity. */
 body,
 h1,
 h2,
 blockquote,
 .quote-mark {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* Hero actions: clear hierarchy without hiding useful options. */
@@ -125,6 +125,15 @@ blockquote,
   .development-note strong {
     margin-top: 2px;
     font-size: 1.05rem;
+  }
+
+  /* Center each marker precisely on the vertical timeline. */
+  .timeline::before {
+    left: 6px;
+  }
+
+  .timeline li::before {
+    left: -4px;
   }
 
   .timeline li.current {
