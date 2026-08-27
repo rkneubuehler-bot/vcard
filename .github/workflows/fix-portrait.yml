@@ -3,7 +3,7 @@ name: Fix portrait image
 on:
   push:
     paths:
-      - 'portrait-base64-upload.txt'
+      - 'portrait-trigger.txt'
 
 permissions:
   contents: write
