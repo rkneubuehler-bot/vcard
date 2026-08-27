@@ -96,7 +96,7 @@
       </div>
 
       <div class="hero-visual">
-        <img src="portrait.jpg" alt="Portrait von Roland Kneubühler" width="1200" height="1500" fetchpriority="high" decoding="async">
+        <img id="site-portrait" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Portrait von Roland Kneubühler" width="1200" height="1500" fetchpriority="high" decoding="async">
       </div>
     </section>
 
@@ -207,5 +207,17 @@
       <span>roland-kneubuehler.ch</span>
     </footer>
   </main>
+  <script>
+    fetch('portrait-base64-upload.txt', { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error('Portrait could not be loaded');
+        return response.text();
+      })
+      .then(base64 => {
+        const portrait = document.getElementById('site-portrait');
+        if (portrait) portrait.src = 'data:image/jpeg;base64,' + base64.trim();
+      })
+      .catch(error => console.error(error));
+  </script>
 </body>
 </html>
