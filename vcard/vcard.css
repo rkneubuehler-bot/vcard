@@ -55,7 +55,7 @@ a { color: inherit; }
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center 12%;
 }
 
 .portrait-wrap::after {
