@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roland-kneubuehler.ch/sitemap.xml
