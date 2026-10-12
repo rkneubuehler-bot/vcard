@@ -2,3 +2,7 @@
   Content-Type: text/vcard; charset=utf-8
   Content-Disposition: inline; filename="Roland-Kneubuehler.vcf"
   Cache-Control: no-store
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
