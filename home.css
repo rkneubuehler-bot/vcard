@@ -35,3 +35,22 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
 /* One typography scale for all profile-page section headings. */
 :root{--section-title-size:clamp(1.35rem,2.2vw,2.1rem)}
 @media(max-width:760px){:root{--section-title-size:clamp(1.35rem,5.8vw,2.1rem)}}
+
+
+/* Berufserfahrung: Datum und Funktion beginnen auf derselben Zeile. */
+.journey-list article{display:block;padding:29px 0 31px}
+.journey-heading{display:grid;grid-template-columns:145px minmax(0,1fr);column-gap:28px;align-items:baseline}
+.journey-heading .journey-no{white-space:nowrap;line-height:1.4}
+.journey-heading h3{margin:0;line-height:1.35}
+.journey-details{margin:6px 0 0 173px;max-width:790px}
+.journey-details .journey-employer{margin:0 0 9px;color:var(--green-dark);font-size:.9rem}
+.journey-details>p:not(.journey-employer){margin:0;color:var(--muted)}
+.journey-details>p:not(.journey-employer)+p{margin-top:9px}
+@media(max-width:760px){
+  .journey-list article{padding:23px 0 25px}
+  .journey-heading{grid-template-columns:114px minmax(0,1fr);column-gap:12px;align-items:start}
+  .journey-heading .journey-no{font-size:.67rem;letter-spacing:0;line-height:1.55;padding-top:3px}
+  .journey-heading h3{font-size:1rem;line-height:1.32}
+  .journey-details{margin:9px 0 0;max-width:none}
+  .journey-details .journey-employer{font-size:.85rem}
+}
