@@ -74,7 +74,7 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
   line-height:.75;
   font-weight:800;
   letter-spacing:-.18em;
-  color:rgba(178,138,80,.065);
+  color:rgba(40,88,69,.115);
   pointer-events:none;
   user-select:none;
 }
@@ -94,6 +94,6 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
     left:-3.2rem;
     top:36%;
     font-size:clamp(9rem,48vw,14rem);
-    color:rgba(178,138,80,.05);
+    color:rgba(40,88,69,.08);
   }
 }
