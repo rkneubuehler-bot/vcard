@@ -56,44 +56,73 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
 }
 
 
-/* CI refinement: subtle RK monogram inspired by the LinkedIn banner. */
+/* CI refinement: LinkedIn-banner brand language on the website. */
+.brand-mark{
+  font-size:0;
+  background-color:var(--green);
+  background-image:url("/assets/brand/rk-monogram-white.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:78% auto;
+}
 .hero{
   position:relative;
   isolation:isolate;
   overflow:hidden;
 }
 .hero::before{
-  content:"RK";
+  content:"";
   position:absolute;
-  left:-5.5rem;
+  left:-7.5rem;
   top:50%;
-  transform:translateY(-52%);
+  transform:translateY(-50%);
+  width:min(43vw,560px);
+  height:88%;
   z-index:-1;
-  font-family:"Manrope",system-ui,sans-serif;
-  font-size:clamp(13rem,24vw,22rem);
-  line-height:.75;
-  font-weight:800;
-  letter-spacing:-.18em;
-  color:rgba(40,88,69,.115);
+  background:url("/assets/brand/rk-banner-left.svg") left center/contain no-repeat;
   pointer-events:none;
-  user-select:none;
 }
 .hero-copy,.hero-visual{
   position:relative;
   z-index:1;
 }
+.hero-copy{
+  padding-left:clamp(70px,7vw,105px);
+}
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0 0 0 auto;
+  width:25%;
+  background:url("/assets/brand/rk-banner-right.svg") right center/100% 100% no-repeat;
+  pointer-events:none;
+}
 @media(max-width:900px){
   .hero::before{
-    left:-4rem;
-    font-size:clamp(10rem,29vw,17rem);
-    opacity:.85;
+    left:-8rem;
+    width:min(48vw,500px);
+    height:82%;
+  }
+  .hero-copy{
+    padding-left:50px;
+  }
+  .hero-visual::after{
+    width:22%;
   }
 }
 @media(max-width:760px){
   .hero::before{
-    left:-3.2rem;
-    top:36%;
-    font-size:clamp(9rem,48vw,14rem);
-    color:rgba(40,88,69,.08);
+    left:-5rem;
+    top:31%;
+    width:72vw;
+    height:42%;
+    opacity:.72;
+  }
+  .hero-copy{
+    padding-left:0;
+  }
+  .hero-visual::after{
+    width:18%;
+    opacity:.9;
   }
 }
