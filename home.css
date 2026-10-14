@@ -54,3 +54,46 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
   .journey-details{margin:9px 0 0;max-width:none}
   .journey-details .journey-employer{font-size:.85rem}
 }
+
+
+/* CI refinement: subtle RK monogram inspired by the LinkedIn banner. */
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.hero::before{
+  content:"RK";
+  position:absolute;
+  left:-5.5rem;
+  top:50%;
+  transform:translateY(-52%);
+  z-index:-1;
+  font-family:"Manrope",system-ui,sans-serif;
+  font-size:clamp(13rem,24vw,22rem);
+  line-height:.75;
+  font-weight:800;
+  letter-spacing:-.18em;
+  color:rgba(178,138,80,.065);
+  pointer-events:none;
+  user-select:none;
+}
+.hero-copy,.hero-visual{
+  position:relative;
+  z-index:1;
+}
+@media(max-width:900px){
+  .hero::before{
+    left:-4rem;
+    font-size:clamp(10rem,29vw,17rem);
+    opacity:.85;
+  }
+}
+@media(max-width:760px){
+  .hero::before{
+    left:-3.2rem;
+    top:36%;
+    font-size:clamp(9rem,48vw,14rem);
+    color:rgba(178,138,80,.05);
+  }
+}
