@@ -56,46 +56,14 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
 }
 
 
-/* CI refinement: restrained banner language, without touching the portrait. */
+/* CI refinement: softer RK brand mark in the header. */
 .brand-mark{
   font-size:0;
-  background-color:var(--green);
-  background-image:url("/assets/brand/rk-monogram-white.svg");
+  background-color:var(--gold-soft);
+  background-image:url("/assets/brand/rk-monogram-green.svg");
   background-repeat:no-repeat;
   background-position:center;
-  background-size:78% auto;
-}
-.hero-copy{
-  position:relative;
-}
-.hero-copy::before{
-  content:"";
-  position:absolute;
-  left:-22px;
-  top:8px;
-  width:2px;
-  height:58px;
-  background:var(--gold);
-  transform:skewX(-24deg);
-  transform-origin:top;
-  opacity:.9;
-  pointer-events:none;
-}
-.hero-visual{
-  position:relative;
-}
-@media(max-width:900px){
-  .hero-copy::before{
-    left:-16px;
-    height:48px;
-  }
-}
-@media(max-width:760px){
-  .hero-copy::before{
-    left:2px;
-    top:-18px;
-    width:46px;
-    height:2px;
-    transform:skewX(-34deg);
-  }
+  background-size:76% auto;
+  border:1px solid rgba(178,138,80,.28);
+  box-shadow:none;
 }
