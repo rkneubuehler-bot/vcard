@@ -56,7 +56,7 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
 }
 
 
-/* CI refinement: LinkedIn-banner brand language on the website. */
+/* CI refinement: restrained banner language, without touching the portrait. */
 .brand-mark{
   font-size:0;
   background-color:var(--green);
@@ -65,64 +65,37 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
   background-position:center;
   background-size:78% auto;
 }
-.hero{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  left:-7.5rem;
-  top:50%;
-  transform:translateY(-50%);
-  width:min(43vw,560px);
-  height:88%;
-  z-index:-1;
-  background:url("/assets/brand/rk-banner-left.svg") left center/contain no-repeat;
-  pointer-events:none;
-}
-.hero-copy,.hero-visual{
-  position:relative;
-  z-index:1;
-}
 .hero-copy{
-  padding-left:clamp(70px,7vw,105px);
+  position:relative;
 }
-.hero-visual::after{
+.hero-copy::before{
   content:"";
   position:absolute;
-  inset:0 0 0 auto;
-  width:25%;
-  background:url("/assets/brand/rk-banner-right.svg") right center/100% 100% no-repeat;
+  left:-22px;
+  top:8px;
+  width:2px;
+  height:58px;
+  background:var(--gold);
+  transform:skewX(-24deg);
+  transform-origin:top;
+  opacity:.9;
   pointer-events:none;
+}
+.hero-visual{
+  position:relative;
 }
 @media(max-width:900px){
-  .hero::before{
-    left:-8rem;
-    width:min(48vw,500px);
-    height:82%;
-  }
-  .hero-copy{
-    padding-left:50px;
-  }
-  .hero-visual::after{
-    width:22%;
+  .hero-copy::before{
+    left:-16px;
+    height:48px;
   }
 }
 @media(max-width:760px){
-  .hero::before{
-    left:-5rem;
-    top:31%;
-    width:72vw;
-    height:42%;
-    opacity:.72;
-  }
-  .hero-copy{
-    padding-left:0;
-  }
-  .hero-visual::after{
-    width:18%;
-    opacity:.9;
+  .hero-copy::before{
+    left:2px;
+    top:-18px;
+    width:46px;
+    height:2px;
+    transform:skewX(-34deg);
   }
 }
