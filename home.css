@@ -60,10 +60,10 @@ h1,h2,h3,.hero-positioning{text-wrap:balance;word-break:normal;overflow-wrap:nor
 .brand-mark{
   font-size:0;
   background-color:var(--gold-soft);
-  background-image:url("/assets/brand/rk-monogram-green.svg");
+  background-image:url("/assets/brand/rk-monogram-gold.svg");
   background-repeat:no-repeat;
   background-position:center;
   background-size:76% auto;
-  border:1px solid rgba(178,138,80,.28);
+  border:1px solid rgba(128,96,53,.40);
   box-shadow:none;
 }
